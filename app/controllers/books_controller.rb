@@ -12,6 +12,8 @@ before_action :ensure_current_user, {only: [:edit,:update,:destroy]}
     @user = current_user
     @books = Book.all
   	@book = Book.find(params[:id])
+    @newbook = Book.new
+
   end
 
   def create
